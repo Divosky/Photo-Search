@@ -1,0 +1,108 @@
+:root {
+  --primary-color: deepskyblue;
+  --form-elements-padding: .7rem;
+  --form-elements-border-radius: .3rem;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 1rem;
+  background: #f0f0f0;
+}
+
+.header__title {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.search {
+  width: 30%;
+  margin: 1rem auto;
+}
+
+.form {
+  font-size: 1rem;
+
+  &__group--inline {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__input--text {
+    width: -webkit-fill-available;
+    padding: var(--form-elements-padding);
+    font-size: inherit;
+    background: #ddd;
+    border: 0;
+    border-top-left-radius: var(--form-elements-border-radius);
+    border-bottom-left-radius: var(--form-elements-border-radius);
+  }
+
+  &__button {
+    flex-grow: 0;
+    padding: var(--form-elements-padding);
+    font-size: inherit;
+    cursor: pointer;
+    background: var(--primary-color);
+    border: 0;
+    border-top-right-radius: var(--form-elements-border-radius);
+    border-bottom-right-radius: var(--form-elements-border-radius);
+  }
+}
+
+.photos {
+  text-align: center;
+  column-count: 3;
+}
+
+.photo {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  transition: .3s ease-in-out;
+
+  &__caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    opacity: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(100% - 4px);
+    padding: .3rem;
+    color: white;
+    text-align: left;
+    background: #000000aa;
+  }
+
+  &:hover {
+    transform: scale(1.048);
+  }
+
+  &:hover &__caption {
+    animation: jumpIn .3s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes jumpIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-90deg) rotateY(-90deg) skew(20deg) scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotateX(-45deg) rotateY(-45deg) skew(10deg) scale(.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX(0) rotateY(0) skew(0) scale(1);
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photo Search</title>
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" value="Photo Search">
+  <meta name="Description" content="A simple webpage to search for photos">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Photo Search">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nowitam.pl/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1537665985976-67acff25c155?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6119c46dbad641322fbb05776febd284&auto=format&fit=crop&w=1534&q=80">
+  <meta property="og:description" content="A simple webpage to search for photos">
+
+  <!-- Mobile header color for Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#00bfff">
+
+  <!-- Mobile header color Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="{{mobileHeaderColor}}">
+
+  <!-- Mobile header color for iOS Safari (supports black, black-translucent or default) -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header__title">Photo Search</h1>
+  </header>
+  <main class="container">
+    <section class="search">
+      <form class="form">
+        <div class="form__group--inline">
+          <input class="form__input--text" id="search-text" type="text" placeholder="Search for...">
+          <button class="form__button" type="submit">Search</button>
+        </div>
+      </form>
+    </section>
+    <section class="photos"></section>
+  </main>
+</body>
+
+</html>
